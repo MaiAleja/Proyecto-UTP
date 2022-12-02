@@ -1,0 +1,31 @@
+<main id="main">
+    <section class="jumbotron text-center">
+        <h2 class="principio-titulo">¿Por que ayudar a los niños?</h2>
+        <p class="principio">Los niños son el futuro de la sociedad, por lo que es importante que se les brinde una vida plena, con el fin de que puedan desarrollarse como personas y puedan tener un mejor futuro.</p>
+        <a class="btn btn-primary" href="/links/add" >Registrarse</a>
+    </section>
+    </main>
+    <section class="seccion-ninos">
+    <h2 class="titulo text-center">Ayuda a alguno de estos niños</h2>
+    <div class="album container p-4">
+        <div class="container">
+            <div class="row">
+                {{#each ninos}}
+                <div class="card col-md-4 text-center">
+                    <div class="card-body">
+                            <h3 class="card-title text-uppercase">
+                                {{this.username}}
+                            </h3>
+                            <p class="card-text">
+                                Edad: {{this.age}} <br>
+                                Ciudad: {{this.city}} <br>
+                                {{this.description}}
+                            </p>
+                    </div>
+                </div>
+                {{/each}}
+            </div>
+        </div>
+    </div>
+    </section>
+</main>
